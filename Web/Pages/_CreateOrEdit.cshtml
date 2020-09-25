@@ -1,0 +1,51 @@
+﻿@using Core.Entities
+@model Customer
+<form id="create-form" method="post" asp-page="Index" asp-route-id="@Model.Id" asp-page-handler="CreateOrEdit" onsubmit="return jQueryModalPost(this);">
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">First Name</label>
+        <div class="col-md-9">
+            <input type="text" autocomplete="off" asp-for="FirstName" name="FirstName" class="form-control">
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Last Name</label>
+        <div class="col-md-9">
+            <input type="text" autocomplete="off" asp-for="LastName" name="LastName" class="form-control">
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Email</label>
+        <div class="col-md-9">
+            <input type="email" autocomplete="off" asp-for="Email" name="Email" class="form-control">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Phone</label>
+        <div class="col-md-9">
+            <input type="number" autocomplete="off" asp-for="PhoneNumber" name="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-md-3 col-form-label">Company</label>
+        <div class="col-md-9">
+            <input type="text" autocomplete="off" asp-for="Company" name="Company" class="form-control" />
+            <span asp-validation-for="Company" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+        </div>
+    </div>
+    <div class="form-group justify-content-between">
+        <button type="button" class="btn btn-secondary close-button" data-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary save-button">Save</button>
+    </div>
+
+</form>
+<script type="text/javascript" language=javascript>
+    $.validator.unobtrusive.parse(document);
+</script>
