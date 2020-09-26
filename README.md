@@ -25,8 +25,6 @@ Let's Build an ASP. NET Core Razor Page Web Application with CRUD Operations. Th
 
 Basically what we will build is a CRUD Application with Rich User Experience and Blazing Fast Operations. Thanks to jQuery!
 
-The Complete source code is available at the end of the article. And I am also attaching a small preview of the CRUD Application in the comments section below.
-
 Read the entire article here
 
 https://www.codewithmukesh.com/blog/razor-page-crud-in-aspnet-core/
