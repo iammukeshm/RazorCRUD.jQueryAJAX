@@ -17,8 +17,12 @@ using Web.Services;
 
 namespace Web.Services
 {
+    public interface IRazorRenderService
+    {
+        Task<string> ToStringAsync<T>(string viewName, T model);
+    }
     public class RazorRenderService : IRazorRenderService
-    { 
+    {
         private readonly IRazorViewEngine _razorViewEngine;
         private readonly ITempDataProvider _tempDataProvider;
         private readonly IServiceProvider _serviceProvider;
